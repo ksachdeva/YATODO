@@ -1,0 +1,35 @@
+{
+  "users": {
+    "simplelogin:1": {
+      "profile": {
+        "name": "John Doe",
+        "email": "john@doe.com"
+      },
+      "verified": true,
+      "organizations": {
+        "-uniqueOrgId_1": {
+          "name": "A great Company",
+          "role": 5
+        }
+      }
+    }
+  },
+
+  "organizations": {
+    "-uniqueOrgId_1": {
+      "about": {
+        "address": "1200, 6th Street, Austin, TX",
+        "name": "A great Company",
+        "phone": "512-111-1111"
+      },
+
+      "staff": {
+        "-uniqueStaffId_1": {
+          "name": "John Doe",
+          "email": "john@doe.com",
+          "role": 5
+        }
+      }
+    }
+  }
+}
