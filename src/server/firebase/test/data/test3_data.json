@@ -1,0 +1,59 @@
+{
+  "users": {
+    "simplelogin:1": {
+      "profile": {
+        "name": "John Doe",
+        "email": "john@doe.com"
+      },
+      "verified": true,
+      "organizations": {
+        "-uniqueOrgId_1": {
+          "name": "A great Company",
+          "staffId": "uniqueStaffId_1",
+          "role": 5
+        }
+      }
+    },
+
+    "simplelogin:2": {
+      "profile": {
+        "name": "Jane Doe",
+        "email": "jane@doe.com"
+      },
+      "verified": true,
+      "organizations": {
+        "-uniqueOrgId_1": {
+          "name": "A great Company",
+          "staffId": "uniqueStaffId_2",
+          "role": 1
+        }
+      }
+    }
+
+  },
+
+  "organizations": {
+    "-uniqueOrgId_1": {
+      "about": {
+        "address": "1200, 6th Street, Austin, TX",
+        "name": "A great Company",
+        "phone": "512-111-1111"
+      },
+
+      "staff": {
+
+        "-uniqueStaffId_1": {
+          "name": "John Doe",
+          "email": "john@doe.com",
+          "role": 5
+        },
+
+        "-uniqueStaffId_2": {
+          "name": "Jane Doe",
+          "email": "jane@doe.com",
+          "role": 1
+        }
+      }
+    }
+  }
+}
