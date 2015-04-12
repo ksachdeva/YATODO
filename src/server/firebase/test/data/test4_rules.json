@@ -1,0 +1,57 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+
+    "users": {
+      "$userId": {
+        "profile": {
+          ".read": "(auth != null) && ($userId === auth.uid)",
+          ".write": "(auth != null) && ($userId === auth.uid)"
+        },
+
+        "organizations": {
+          ".read": "(auth != null) && ($userId === auth.uid)",
+          ".write": false
+        }
+      }
+    },
+
+    "email_verification_submissions": {
+      "$userId": {
+        "code": {
+          ".read": "(auth != null) && ($userId === auth.uid)",
+          ".write": "(auth != null) && ($userId === auth.uid)"
+        }
+      }
+    },
+
+    "organizations": {
+      "$organization": {
+
+        "about": {
+          ".read": "root.child('users').child(auth.uid).child('organizations').hasChildren([$organization])",
+          ".write": "root.child('users').child(auth.uid).child('organizations').child($organization).child('role').val() === 5"
+        },
+
+        "staff": {
+          "$staffId": {
+            ".read": "root.child('users').child(auth.uid).child('organizations').child($organization).child('role').val() === 5",
+            ".write": "root.child('users').child(auth.uid).child('organizations').child($organization).child('role').val() === 5"
+          }
+        },
+
+        "todos": {
+          ".read": "root.child('users').child(auth.uid).child('organizations').child($organization).child('role').val() === 5",
+          "$staffId": {
+            "$todoId": {
+              ".read": "(root.child('users/' + auth.uid + '/organizations/' + $organization).child('role').val() === 5) || (root.child('users/' + auth.uid + '/organizations/' + $organization).child('staffId').val() === $staffId)",
+              ".write": "(root.child('users/' + auth.uid + '/organizations/' + $organization).child('role').val() === 5) || (root.child('users/' + auth.uid + '/organizations/' + $organization).child('staffId').val() === $staffId)"
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

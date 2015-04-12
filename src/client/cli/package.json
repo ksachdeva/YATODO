@@ -1,0 +1,16 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kapil Sachdeva",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.7.1",
+    "firebase": "^2.2.3",
+    "node-env-file": "^0.1.7"
+  }
+}
