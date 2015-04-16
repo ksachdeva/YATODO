@@ -1,0 +1,7 @@
+runtime "node"
+stack "node-0.10"
+exec "iw_code_generator.js"
+dir "node_modules"
+file "fbutils.js"
+file "package.json"
+file ".env"
