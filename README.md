@@ -50,3 +50,12 @@ git checkout -b ninja-stage-5 origin/ninja-stage-5
 
 - Usage of iron.io's ironworker to do user invitation code generation
 - Queuing ironworker's task from nodejs based workers
+
+## Stage 6
+
+https://github.com/ksachdeva/YATODO/tree/ninja-stage-6
+
+git checkout -b ninja-stage-6 origin/ninja-stage-6
+
+- Creation of organization by a user
+- An ionic app
