@@ -1,0 +1,33 @@
+<ion-view view-title="Register">
+
+  <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+    <ion-nav-back-button class="button-clear">
+      <i class="ion-arrow-left-c"></i> Back
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content ng-controller="VerifyUserCtrl">
+
+    <form ng-submit="verify(user)">
+      <div class="list">
+
+        <div class="item item-divider">
+          Verify by entering the invite code
+        </div>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Enter invitation code</span>
+          <input type="password" ng-model="user.code">
+        </label>
+
+        <label class="item ">
+          <button class="button button-block button-energized" type="submit">Verify</button>
+        </label>
+
+      </div>
+
+    </form>
+
+  </ion-content>
+
+</ion-view>

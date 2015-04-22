@@ -17,6 +17,15 @@
       }
     },
 
+    "organization_creation_submissions": {
+      "$userId": {
+        "info": {
+          ".read": "(auth != null) && ($userId === auth.uid)",
+          ".write": "(auth != null) && ($userId === auth.uid)"
+        }
+      }
+    },
+
     "email_verification_submissions": {
       "$userId": {
         "code": {
@@ -50,7 +59,6 @@
             }
           }
         }
-
       }
     }
   }

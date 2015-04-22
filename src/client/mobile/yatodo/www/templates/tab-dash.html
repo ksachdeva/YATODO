@@ -1,0 +1,15 @@
+<ion-view view-title="My Todo">
+  <ion-content class="padding">
+
+    <button type="button" ng-click="addNewTodo()">
+      New Todo
+    </button>
+
+    <div class="card" ng-repeat="t in todos_by_me">
+      <div class="item item-text-wrap">
+        {{ t.title }}
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

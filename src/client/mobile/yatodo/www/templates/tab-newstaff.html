@@ -1,0 +1,32 @@
+<ion-view view-title="Register">
+
+  <ion-content class="padding" ng-controller="RegisterNewStaffCtrl">
+
+    <form ng-submit="signUp(user)">
+      <div class="list">
+
+        <div class="item item-divider">
+          Register Staff
+        </div>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Name</span>
+          <input type="text" ng-model="user.name" placeholder="Jane Doe">
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Email</span>
+          <input type="email" ng-model="user.email" placeholder="you@email.com">
+        </label>
+
+        <label class="item ">
+          <button class="button button-block button-energized" type="submit">Register</button>
+        </label>
+
+      </div>
+
+    </form>
+
+  </ion-content>
+
+</ion-view>

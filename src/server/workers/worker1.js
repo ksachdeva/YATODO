@@ -41,7 +41,7 @@ ref.authWithCustomToken(fbUtils.FB_SECRET_KEY, function(error, authData) {
       iw.tasksCreate('code_generator', payload, options,
         function(error, body) {
           if (error) {
-            console.log("An error occurred when queuing a task ..");
+            console.log("An error occurred when queuing a task ..", error);
           }
         });
     }

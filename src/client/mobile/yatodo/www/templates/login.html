@@ -1,0 +1,56 @@
+<ion-view view-title="YATODO">
+
+  <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+    <ion-nav-back-button class="button-clear">
+      <i class="ion-arrow-left-c"></i> Back
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content>
+
+    <div class="logo-container">
+      <img src="img/yatodo.png">
+    </div>
+
+    <div class="card" ng-controller="LoginCtrl">
+
+      <div class="item item-divider">
+        Sign In
+      </div>
+
+      <form ng-submit="signIn(user)">
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Email</span>
+          <input type="email" ng-model="user.email" placeholder="Your email address">
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="user.password" placeholder="Your password">
+        </label>
+
+        <div class="item item-divider">
+          <div style="text-align:right;">
+            <button type="submit" class="ubtn ubtn-glow ubtn-rounded ubtn-raised ubtn-primary">
+              Sign In
+            </button>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+
+    <div class="list list-inset">
+
+      <ion-item ui-sref="register" class="item-icon-right">
+        Register for free user account
+        <i class="icon ion-chevron-right"></i>
+      </ion-item>
+
+    </div>
+
+  </ion-content>
+
+</ion-view>

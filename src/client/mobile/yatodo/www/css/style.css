@@ -1,0 +1,9 @@
+/* Empty. Add your own CSS if you like */
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  width: 100%;
+}

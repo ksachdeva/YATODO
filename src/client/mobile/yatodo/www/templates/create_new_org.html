@@ -1,0 +1,43 @@
+<ion-view view-title="New Organization">
+
+  <ion-nav-bar class="bar-positive nav-title-slide-ios7">
+    <ion-nav-back-button class="button-clear">
+      <i class="ion-arrow-left-c"></i> Back
+    </ion-nav-back-button>
+  </ion-nav-bar>
+
+  <ion-content ng-controller="RegisterOrgCtrl">
+
+    <form ng-submit="register(org)">
+      <div class="list">
+
+        <div class="item item-divider">
+          Register
+        </div>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Name</span>
+          <input type="text" ng-model="org.name" placeholder="Great Company">
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Email</span>
+          <input type="text" ng-model="org.address" placeholder="1 Apple Way, Cupertino, CA">
+        </label>
+
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Phone</span>
+          <input type="text" ng-model="org.phone" placeholder="512-222-2222">
+        </label>
+
+        <label class="item ">
+          <button class="button button-block button-energized" type="submit">Register</button>
+        </label>
+
+      </div>
+
+    </form>
+
+  </ion-content>
+
+</ion-view>
