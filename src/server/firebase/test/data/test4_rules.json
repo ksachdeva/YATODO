@@ -10,6 +10,11 @@
           ".write": "(auth != null) && ($userId === auth.uid)"
         },
 
+        "verified": {
+          ".read": "(auth != null) && ($userId === auth.uid)",
+          ".write": false
+        },
+
         "organizations": {
           ".read": "(auth != null) && ($userId === auth.uid)",
           ".write": false
